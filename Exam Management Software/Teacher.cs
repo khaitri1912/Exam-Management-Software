@@ -30,12 +30,19 @@ namespace Exam_Management_Software
         private void Teacher_Load(object sender, EventArgs e)
         {
             uC_AddNewQuestion1.Visible = false;
+            uC_UpdateQuestion1.Visible = false;
         }
 
         private void btnAddNewQuestion_Click(object sender, EventArgs e)
         {
             uC_AddNewQuestion1.Visible = true;
             uC_AddNewQuestion1.BringToFront();
+        }
+
+        private void btnUpdateQuestion_Click(object sender, EventArgs e)
+        {
+            uC_UpdateQuestion1.Visible = true;
+            uC_UpdateQuestion1.BringToFront();
         }
     }
 }

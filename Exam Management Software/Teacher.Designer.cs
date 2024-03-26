@@ -34,7 +34,7 @@
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUpdateQuestion = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddNewQuestion = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -42,6 +42,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.uC_AddNewQuestion1 = new Exam_Management_Software.Teacher_UC.UC_AddNewQuestion();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.uC_UpdateQuestion1 = new Exam_Management_Software.Teacher_UC.UC_UpdateQuestion();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -54,7 +56,7 @@
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.guna2Button4);
             this.panel1.Controls.Add(this.guna2Button3);
-            this.panel1.Controls.Add(this.guna2Button2);
+            this.panel1.Controls.Add(this.btnUpdateQuestion);
             this.panel1.Controls.Add(this.btnAddNewQuestion);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -78,9 +80,9 @@
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Location = new System.Drawing.Point(75, 698);
+            this.btnExit.Location = new System.Drawing.Point(75, 688);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(131, 45);
+            this.btnExit.Size = new System.Drawing.Size(131, 55);
             this.btnExit.TabIndex = 6;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -122,24 +124,25 @@
             this.guna2Button3.TabIndex = 4;
             this.guna2Button3.Text = "View and Delete Questions";
             // 
-            // guna2Button2
+            // btnUpdateQuestion
             // 
-            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button2.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2Button2.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.CheckedState.ForeColor = System.Drawing.Color.LimeGreen;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.LimeGreen;
-            this.guna2Button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(5, 448);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(263, 45);
-            this.guna2Button2.TabIndex = 3;
-            this.guna2Button2.Text = "Update Question";
+            this.btnUpdateQuestion.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnUpdateQuestion.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.btnUpdateQuestion.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnUpdateQuestion.CheckedState.ForeColor = System.Drawing.Color.LimeGreen;
+            this.btnUpdateQuestion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateQuestion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateQuestion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateQuestion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdateQuestion.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnUpdateQuestion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateQuestion.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateQuestion.Location = new System.Drawing.Point(5, 448);
+            this.btnUpdateQuestion.Name = "btnUpdateQuestion";
+            this.btnUpdateQuestion.Size = new System.Drawing.Size(263, 45);
+            this.btnUpdateQuestion.TabIndex = 3;
+            this.btnUpdateQuestion.Text = "Update Question";
+            this.btnUpdateQuestion.Click += new System.EventHandler(this.btnUpdateQuestion_Click);
             // 
             // btnAddNewQuestion
             // 
@@ -187,6 +190,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.uC_UpdateQuestion1);
             this.panel2.Controls.Add(this.uC_AddNewQuestion1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(274, 0);
@@ -212,10 +216,22 @@
             // uC_AddNewQuestion1
             // 
             this.uC_AddNewQuestion1.BackColor = System.Drawing.Color.White;
-            this.uC_AddNewQuestion1.Location = new System.Drawing.Point(-3, 0);
+            this.uC_AddNewQuestion1.Location = new System.Drawing.Point(0, 0);
             this.uC_AddNewQuestion1.Name = "uC_AddNewQuestion1";
-            this.uC_AddNewQuestion1.Size = new System.Drawing.Size(1104, 768);
+            this.uC_AddNewQuestion1.Size = new System.Drawing.Size(1101, 768);
             this.uC_AddNewQuestion1.TabIndex = 1;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.TargetControl = this.panel2;
+            // 
+            // uC_UpdateQuestion1
+            // 
+            this.uC_UpdateQuestion1.BackColor = System.Drawing.Color.White;
+            this.uC_UpdateQuestion1.Location = new System.Drawing.Point(0, 0);
+            this.uC_UpdateQuestion1.Name = "uC_UpdateQuestion1";
+            this.uC_UpdateQuestion1.Size = new System.Drawing.Size(1104, 768);
+            this.uC_UpdateQuestion1.TabIndex = 2;
             // 
             // Teacher
             // 
@@ -248,9 +264,11 @@
         private Guna.UI2.WinForms.Guna2Button btnAddNewQuestion;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnUpdateQuestion;
         private Guna.UI2.WinForms.Guna2Button btnExit;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Teacher_UC.UC_AddNewQuestion uC_AddNewQuestion1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Teacher_UC.UC_UpdateQuestion uC_UpdateQuestion1;
     }
 }

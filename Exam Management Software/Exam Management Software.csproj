@@ -73,6 +73,12 @@
     <Compile Include="Teacher_UC\UC_AddNewQuestion.Designer.cs">
       <DependentUpon>UC_AddNewQuestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teacher_UC\UC_UpdateQuestion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Teacher_UC\UC_UpdateQuestion.Designer.cs">
+      <DependentUpon>UC_UpdateQuestion.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher_UC\UC_AddNewQuestion.resx">
       <DependentUpon>UC_AddNewQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher_UC\UC_UpdateQuestion.resx">
+      <DependentUpon>UC_UpdateQuestion.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
