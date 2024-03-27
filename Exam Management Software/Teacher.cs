@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Exam_Management_Software.Teacher_UC;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +32,7 @@ namespace Exam_Management_Software
         {
             uC_AddNewQuestion1.Visible = false;
             uC_UpdateQuestion1.Visible = false;
+            uC_ViewDeleteQuestion1.Visible = false;
         }
 
         private void btnAddNewQuestion_Click(object sender, EventArgs e)
@@ -43,6 +45,19 @@ namespace Exam_Management_Software
         {
             uC_UpdateQuestion1.Visible = true;
             uC_UpdateQuestion1.BringToFront();
+        }
+
+        private void btnViewDeleteQuestions_Click(object sender, EventArgs e)
+        {
+            uC_ViewDeleteQuestion1.Visible=true;
+            uC_ViewDeleteQuestion1.BringToFront();
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 form1 = new Form1();
+            form1.Show();
         }
     }
 }

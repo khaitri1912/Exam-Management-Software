@@ -33,7 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnViewDeleteQuestions = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdateQuestion = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddNewQuestion = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,9 +41,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.uC_AddNewQuestion1 = new Exam_Management_Software.Teacher_UC.UC_AddNewQuestion();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.uC_ViewDeleteQuestion1 = new Exam_Management_Software.Teacher_UC.UC_ViewDeleteQuestion();
             this.uC_UpdateQuestion1 = new Exam_Management_Software.Teacher_UC.UC_UpdateQuestion();
+            this.uC_AddNewQuestion1 = new Exam_Management_Software.Teacher_UC.UC_AddNewQuestion();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -55,7 +57,7 @@
             this.panel1.BackColor = System.Drawing.Color.LimeGreen;
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.guna2Button4);
-            this.panel1.Controls.Add(this.guna2Button3);
+            this.panel1.Controls.Add(this.btnViewDeleteQuestions);
             this.panel1.Controls.Add(this.btnUpdateQuestion);
             this.panel1.Controls.Add(this.btnAddNewQuestion);
             this.panel1.Controls.Add(this.label1);
@@ -104,25 +106,27 @@
             this.guna2Button4.Size = new System.Drawing.Size(263, 45);
             this.guna2Button4.TabIndex = 5;
             this.guna2Button4.Text = "Log Out";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
-            // guna2Button3
+            // btnViewDeleteQuestions
             // 
-            this.guna2Button3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button3.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2Button3.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.CheckedState.ForeColor = System.Drawing.Color.LimeGreen;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.LimeGreen;
-            this.guna2Button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(5, 511);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(263, 56);
-            this.guna2Button3.TabIndex = 4;
-            this.guna2Button3.Text = "View and Delete Questions";
+            this.btnViewDeleteQuestions.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnViewDeleteQuestions.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.btnViewDeleteQuestions.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnViewDeleteQuestions.CheckedState.ForeColor = System.Drawing.Color.LimeGreen;
+            this.btnViewDeleteQuestions.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewDeleteQuestions.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewDeleteQuestions.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnViewDeleteQuestions.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnViewDeleteQuestions.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnViewDeleteQuestions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewDeleteQuestions.ForeColor = System.Drawing.Color.White;
+            this.btnViewDeleteQuestions.Location = new System.Drawing.Point(5, 511);
+            this.btnViewDeleteQuestions.Name = "btnViewDeleteQuestions";
+            this.btnViewDeleteQuestions.Size = new System.Drawing.Size(263, 56);
+            this.btnViewDeleteQuestions.TabIndex = 4;
+            this.btnViewDeleteQuestions.Text = "View and Delete Questions";
+            this.btnViewDeleteQuestions.Click += new System.EventHandler(this.btnViewDeleteQuestions_Click);
             // 
             // btnUpdateQuestion
             // 
@@ -190,6 +194,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.uC_ViewDeleteQuestion1);
             this.panel2.Controls.Add(this.uC_UpdateQuestion1);
             this.panel2.Controls.Add(this.uC_AddNewQuestion1);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -213,17 +218,21 @@
             // 
             this.guna2Elipse1.TargetControl = this.panel2;
             // 
-            // uC_AddNewQuestion1
-            // 
-            this.uC_AddNewQuestion1.BackColor = System.Drawing.Color.White;
-            this.uC_AddNewQuestion1.Location = new System.Drawing.Point(0, 0);
-            this.uC_AddNewQuestion1.Name = "uC_AddNewQuestion1";
-            this.uC_AddNewQuestion1.Size = new System.Drawing.Size(1101, 768);
-            this.uC_AddNewQuestion1.TabIndex = 1;
-            // 
             // guna2Elipse2
             // 
             this.guna2Elipse2.TargetControl = this.panel2;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.TargetControl = this.panel2;
+            // 
+            // uC_ViewDeleteQuestion1
+            // 
+            this.uC_ViewDeleteQuestion1.BackColor = System.Drawing.Color.White;
+            this.uC_ViewDeleteQuestion1.Location = new System.Drawing.Point(0, 0);
+            this.uC_ViewDeleteQuestion1.Name = "uC_ViewDeleteQuestion1";
+            this.uC_ViewDeleteQuestion1.Size = new System.Drawing.Size(1104, 768);
+            this.uC_ViewDeleteQuestion1.TabIndex = 3;
             // 
             // uC_UpdateQuestion1
             // 
@@ -232,6 +241,14 @@
             this.uC_UpdateQuestion1.Name = "uC_UpdateQuestion1";
             this.uC_UpdateQuestion1.Size = new System.Drawing.Size(1104, 768);
             this.uC_UpdateQuestion1.TabIndex = 2;
+            // 
+            // uC_AddNewQuestion1
+            // 
+            this.uC_AddNewQuestion1.BackColor = System.Drawing.Color.White;
+            this.uC_AddNewQuestion1.Location = new System.Drawing.Point(0, 0);
+            this.uC_AddNewQuestion1.Name = "uC_AddNewQuestion1";
+            this.uC_AddNewQuestion1.Size = new System.Drawing.Size(1101, 768);
+            this.uC_AddNewQuestion1.TabIndex = 1;
             // 
             // Teacher
             // 
@@ -263,12 +280,14 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnAddNewQuestion;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnViewDeleteQuestions;
         private Guna.UI2.WinForms.Guna2Button btnUpdateQuestion;
         private Guna.UI2.WinForms.Guna2Button btnExit;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Teacher_UC.UC_AddNewQuestion uC_AddNewQuestion1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Teacher_UC.UC_UpdateQuestion uC_UpdateQuestion1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private Teacher_UC.UC_ViewDeleteQuestion uC_ViewDeleteQuestion1;
     }
 }
